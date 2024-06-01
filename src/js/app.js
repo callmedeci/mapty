@@ -218,6 +218,8 @@ class App {
         iconColor: 'rgb(244 63 94)',
         grow: 'row',
         position: 'top-end',
+        background: '#42484d',
+        color: 'white',
         animation: true,
         toast: true,
         timerProgressBar: true,
