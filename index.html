@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/public/icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="mapty" content="You can add your workouts and have them on the map">
+  <title>Mapty || For Your Workouts</title>
+  <link rel="stylesheet" href="./src/css/app.css">
+  <link rel="stylesheet" href="./node_modules/leaflet/dist/leaflet.css">
+
+  <script defer type="module" src="./src/js/app.js"></script>
+</head>
+
+<body class="overscroll-y-none flex w-full h-dvh font-gotham-book leading-none relative">
+
+  <div class="sidebar sidebarDropIn">
+    <img src="./public/logo.png" alt="Mapty logo" class="img--logo">
+
+    <h1 class="text-center text-zinc-50 mb-4 ml-5">
+      <span style="--order:1" class="h1--animation">F</span><span style="--order:2" class="h1--animation">o</span><span
+        style="--order:3" class="h1--animation">r</span> <span style="--order:4" class="h1--animation">Y</span><span
+        style="--order:5" class="h1--animation">o</span><span style="--order:6" class="h1--animation">u</span><span
+        style="--order:7" class="h1--animation">r</span>
+      <span style="--order:8" class="h1--animation">W</span><span style="--order:9" class="h1--animation">o</span><span
+        style="--order:10" class="h1--animation">r</span><span style="--order:11" class="h1--animation">k</span><span
+        style="--order:12" class="h1--animation">o</span><span style="--order:13" class="h1--animation">u</span><span
+        style="--order:14" class="h1--animation">t</span><span style="--order:15" class="h1--animation">s</span>
+    </h1>
+
+    <ul class="workouts">
+      <form class="form form__hidden hidden">
+        <div style="--order: 1" class="form__row">
+          <label for="selct-type" class="form__label">
+            Type
+          </label>
+          <select class="form__input form__input--type">
+            <option class="font-nerd-medium" value="running">Running</option>
+            <option class="font-nerd-medium" value="cycling">Cycling</option>
+          </select>
+        </div>
+
+        <div style="--order: 2" class="form__row">
+          <label for="selct-type" class="form__label">
+            Distance
+          </label>
+          <input type="text" placeholder="km" class="form__input form__input--distance">
+        </div>
+
+        <div style="--order: 3" class="form__row">
+          <label for="selct-type" class="form__label">
+            Duration
+          </label>
+          <input type="text" placeholder="min" class="form__input form__input--duration">
+        </div>
+
+        <div style="--order: 4" class="form__row">
+          <label for="selct-type" class="form__label">
+            Cadence
+          </label>
+          <input type="text" placeholder="step/min" class="form__input form__input--cadence">
+        </div>
+
+        <div style="--order: 5" class="form__row form__row--hidden">
+          <label class="form__label">Elev Gain</label>
+          <input class="form__input form__input--elevation" placeholder="meters" />
+        </div>
+
+        <button class="hidden">OK</button>
+      </form>
+    </ul>
+
+    <div class="w-full grid grid-cols-2 gap-4">
+      <button class="deleteAll__button">
+        Delete All
+      </button>
+
+      <button class="sort__button">
+        Sort &DownArrowUpArrow;
+      </button>
+    </div>
+
+    <p class="text-slate-300 font-nerd-light text-xs my-4 text-center tracking-tighter">
+      &copy; Copyright by
+      <a class="text-slate-300 hover:text-slate-100 transition-all duration-500" target="_blank"
+        href="https://twitter.com/jonasschmedtman">Yones
+        Maghsoudie</a>.
+      Don't
+      claim as your own.
+    </p>
+
+  </div>
+
+  <div id="fade-elements" class="fade__el fade__elements"></div>
+
+  <div class="flex-1 bg-zinc-500 h-dvh z-10" id="map"></div>
+</body>
+
+</html>
