@@ -394,6 +394,8 @@ class App {
 
       if (currentWorkoutEl.dataset.id !== currentWorkout.id) return;
 
+      console.log(currentWorkoutEl);
+
       const currentworkoutDurationEl = document.querySelector('.workout--duration');
       const currentworkoutDistanceEl = document.querySelector('.workout--distance');
 
@@ -436,6 +438,9 @@ class App {
           return this._notValidMessage();
         };
 
+        console.log(workouts);
+
+
         //Success Message
         this._SuccessMessage(type);
 
@@ -476,10 +481,14 @@ class App {
         //Success Message
         this._SuccessMessage(type);
 
+
+
         // Add/Edit Inputs
         workoutEl.forEach(el => {
           if (el.dataset.id === btn.getAttribute('id')) {
             const currentWorkoutIndex = this.#workouts.findIndex(work => work.id === btn.getAttribute('id'));
+
+            console.log(currentWorkoutIndex);
 
             updateWorkoutData(currentWorkoutIndex, { distance: distance, duration: duration, cadance: undefined, elevationGain: elevation }, {
               currentworkoutDurationEl: currentworkoutDurationEl,
@@ -506,6 +515,8 @@ class App {
     workouts.forEach(workout => {
       this._renderWorkout(workout);
     });
+
+    console.log(this.#workouts);
 
     this.#isSort = !this.#isSort;
   }
