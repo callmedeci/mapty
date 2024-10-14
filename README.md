@@ -34,17 +34,17 @@ To run this project locally, follow these steps:
    git clone https://github.com/yourusername/mapty.git
 ```
 
-2.Navigate into the project directory:
+2. Navigate into the project directory:
 ```bash
 cd mapty
 ```
 
-3.Install dependencies:
+3. Install dependencies:
 ```bash
 npm install
 ```
 
-4.Run the project locally:
+4. Run the project locally:
 ```bash
 npm run dev
 ```
