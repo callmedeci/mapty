@@ -25,14 +25,31 @@ Check it out here: [Mapty Live](https://mapty-livid.vercel.app/)
 - **HTML5/CSS3**: Structuring and styling the web app.
 - **Vercel**: Deployed for live hosting.
 
-## Screenshots
-
-![Mapty Screenshot](url-to-screenshot)
-
 ## Getting Started
 
 To run this project locally, follow these steps:
 
 1. Clone the repository:
-   ```bash
+```bash
    git clone https://github.com/yourusername/mapty.git
+```
+
+2.Navigate into the project directory:
+```bash
+cd mapty
+```
+
+3.Install dependencies:
+```bash
+npm install
+```
+
+4.Run the project locally:
+```bash
+npm run dev
+```
+
+Open the application in your browser at http://localhost:5173.
+
+## Contributing
+If you would like to contribute to this project, feel free to fork the repository and submit a pull request. Contributions are always welcome!
